@@ -26,6 +26,43 @@
   </head>
 </head>
 <body class="bg-[#F8FAFC] min-h-screen">
-    
+  <!--Header section-->
+ <div class="max-w-6xl mx-auto px-4 pt-14">
+  <header class="flex flex-col">
+    <div class="mx-auto w-full">
+          <div class="flex justify-between items-center">
+            <h2 class="font-bold text-[32px] text-[#002c5c]">
+              Job Application Tracker
+            </h2>
+         
+          </div>
+          <!-- Job Application Tracker card-->
+            <div
+            id="cards-container"
+            class="mt-5 grid gap-5 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 auto-rows-fr">
+            <div
+              class="card bg-base-100 shadow-sm flex flex-col justify-center p-5">
+              <h2 class="card-title text-[#002c5c]">Interviews</h2>
+              <p id="interviews-counter"class="text-[#10b981] font-bold text-2xl"> 0</p>
+            </div>
+            <div
+              class="card bg-base-100 shadow-sm flex flex-col justify-center p-5">
+              <h2 class="card-title text-[#002c5c]">Total</h2>
+              <p id="total-counter" class="text-[#002c5c] font-bold text-2xl"> 8</p>
+            </div>
+            <div
+              class="card bg-base-100 shadow-sm flex flex-col justify-center p-5">
+              <h2 class="card-title text-[#002c5c]">Rejected</h2>
+              <p id="rejected-counter" class="text-red-600 font-bold text-2xl">0</p>
+            </div>
+          </div>
+        </div>
+      </header>
+
+  </header>
+
+   
+
+ </div>
 </body>
 </html>
