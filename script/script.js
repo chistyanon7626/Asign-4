@@ -1,3 +1,30 @@
+//initialization
+const totalCounter = createCounter("total-counter");
+const interviewCounter = createCounter("interviews-counter");
+const rejectedCounter = createCounter("rejected-counter");
+const emptyState = createEmptyState("empty-message");
+const jobLabel = createJobLabel("job-count-label");
+const filterModule = createFilterModule(emptyState, jobLabel);
+const cardActions = createCardActions(
+  totalCounter, interviewCounter,rejectedCounter,filterModule
+);
+//event listener
+document.addEventListener("click", function (event) {
+  const button = event.target.closest("button");
+  if (!button) return;
+
+  if (button.classList.contains("action-btn")) {
+    cardActions.handleAction(button);
+  }
+
+  if (button.classList.contains("delete-btn")) {
+    cardActions.handleDelete(button);
+  }
+
+  if (button.hasAttribute("data-filter")) {
+    filterModule.setFilter(button.getAttribute("data-filter"));
+  }
+});
 //Job available counter
 function createCounter(elementId){
     const element = document.getElementById(element);
@@ -122,14 +149,5 @@ function createCardActions(totalCounter, interviewCounter, rejectedCounter, filt
   }
    return { handleAction, handleDelete };
 }
-//initialization
-const totalCounter = createCounter("total-counter");
-const interviewCounter = createCounter("interviews-counter");
-const rejectedCounter = createCounter("rejected-counter");
-const emptyState = createEmptyState("empty-message");
-const jobLabel = createJobLabel("job-count-label");
-const filterModule = createFilterModule(emptyState, jobLabel);
-const cardActions = createCardActions(
-  totalCounter, interviewCounter,rejectedCounter,filterModule
-);
 
+filterModule.apply();
