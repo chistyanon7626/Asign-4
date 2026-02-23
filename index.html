@@ -57,11 +57,78 @@
             </div>
           </div>
         </div>
-      </header>
+    </header>
+    <hr class="my-8 border-t-2 border-[#E6E7E9]">
+     <!-- Available Jobs Section-->
+      <section class="w-full">
+        <div class="flex justify-between items-center mb-4">
+          <h2 class="font-semibold text-[#002C5C] text-[20px]">
+            Available Jobs
+          </h2>
+          <p><span id="job-count-label">8</span> jobs</p>
+        </div>
 
-  </header>
-
-   
+        <!--Available Jobs Buttons-->
+        <div class="flex flex-wrap gap-2">
+          <button class="btn btn-outline btn-accent" data-filter="all">
+            All
+          </button>
+          <button class="btn btn-outline btn-warning" data-filter="interviewed">
+            Interviewed
+          </button>
+          <button class="btn btn-outline btn-error" data-filter="rejected">
+            Rejected
+          </button>
+        </div>
+      </section>
+       <section class="w-full pt-4 space-y-4 ">
+        <div
+          id="empty-message"
+          class=" flex hidden bg-white flex-col items-center justify-center py-10 w-full col-span-full "
+        >
+          <img
+            src="./jobs.png"
+            alt="No jobs"
+            class="w-32 h-32 mb-4  "
+          />
+          <h3 class="text-xl font-bold text-[#002c5c]">No jobs available</h3>
+          <p class="text-gray-500">Check back soon for new job opportunities</p>
+        </div>
+        <div class="card bg-base-100 w-full shadow-sm">
+          <div class="card-body">
+            <h2
+              class="card-title flex justify-between font-semibold text-[18px] text-[#002C5C]"
+            >
+              Mobile First Corp
+              <button class="btn btn-circle btn-outline btn-error delete-btn">
+                <i class="fa-regular fa-trash-can"></i>
+              </button>
+            </h2>
+            <p class="text-[#64748B]">React Native Developer</p>
+            <p class="text-[14px] text-[#64748B]">
+              Remote • Full-time • $130,000 - $175,000
+            </p>
+            <div>
+              <button
+                class="status-label py-2 px-3 bg-[#EEF4FF] font-medium text-[#002C5C]"
+              >
+                Not Applied
+              </button>
+            </div>
+            <p class="text-[14px] text-[#323B49]">
+              Build cross-platform mobile applications using React Native. Work
+              on products used by millions of users worldwide.
+            </p>
+            <div class="card-actions justify-start">
+              <button class="btn btn-outline btn-accent action-btn">
+                Interview
+              </button>
+              <button class="btn btn-outline btn-error action-btn">
+                Rejected
+              </button>
+            </div>
+          </div>
+        </div>
 
  </div>
 </body>
