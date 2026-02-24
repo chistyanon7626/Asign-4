@@ -58,17 +58,17 @@ function createEmptyState(elementId){
     return { show, hide };
 }
 
-// job 
-function createJobLabel(elementId){
-    const element = document.getElementById(elementId);
-    function update(){
-        const cards = document.querySelectorAll("section .card");
-        const visibleCards = Array.from(cards).filter(card => !card.classList.contains("hidden"));
-        element.innerText = visibleCards.length;
+    // job 
+    function createJobLabel(elementId){
+        const element = document.getElementById(elementId);
+        function update(){
+            const cards = document.querySelectorAll("section .card");
+            const visibleCards = Array.from(cards).filter(card => !card.classList.contains("hidden"));
+            element.innerText = visibleCards.length;
+        }
+        return { update };
     }
-    return { update };
-}
-//filter
+    //filter
 
 function createFilterModule(emptyState, jobLabel){
     let currentFilter = "all";
